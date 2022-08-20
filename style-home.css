@@ -1,16 +1,23 @@
-.principal>*+* {
+body {
+  gap: 0;
+}
+
+.principal>*+*,
+.beneficios-info li+li,
+.mapa>*+* {
   margin-top: 1rem;
 }
 
 .image-container {
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 h2 {
   --background: hsl(0, 100%, 50%);
-  padding: .5rem;
+  padding: .5rem 0 .5rem;
   box-shadow: 8px 8px 0 -2px var(--background);
-  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
   cursor: pointer;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -19,7 +26,6 @@ h2 {
 
 h2:hover {
   box-shadow: 12px 12px 0 -2px var(--background);
-  background-color: hsl(0, 0%, 95%);
 }
 
 p {
@@ -29,9 +35,20 @@ p {
   hyphens: auto;
 }
 
+.utensilios {
+  overflow: hidden;
+  width: 120px;
+  margin-inline: 20px;
+  float: left;
+}
+
+
 .beneficios-info {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  grid-template-rows: repeat(2, min-content);
+  grid-auto-columns: 1fr;
+  grid-auto-flow: dense;
   grid-gap: 1.5rem;
   padding-block: 2rem;
   justify-content: space-between;
@@ -43,11 +60,41 @@ p {
 }
 
 .beneficios-info ul {
-  flex: 1 1 100%;
   columns: 2;
 }
 
-.beneficios-info li+li {
-  margin-top: 1rem;
+.items+.items {
   text-align: justify;
+}
+
+.video {
+  grid-column: 1 / -1;
+  width: min(560px, 100%);
+  margin: 1em auto;
+}
+
+.mapa {
+  padding-block: 3rem;
+}
+
+.mapa p {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .beneficios-info {
+    grid-template-columns: 1fr;
+  }
+
+  .beneficios-info ul {
+    columns: 1;
+  }
+
+  .items:first-child {
+    font-weight: bold;
+  }
+
+  .items {
+    text-align: center !important;
+  }
 }

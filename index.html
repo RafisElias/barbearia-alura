@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/logo.png" sizes="any">
   <title>Barbearia Alura</title>
-
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style-home.css">
 
@@ -16,7 +17,7 @@
   <header>
     <div>
       <a href="index.html" class="logo">
-        <img src="./logo.png" alt="logo" class="logo-img">
+        <img src="./images/logo.png" alt="logo" class="logo-img">
         <h1>Barbearia Alura</h1>
       </a>
       <nav>
@@ -28,13 +29,16 @@
       </nav>
     </div>
   </header>
+  <section class="image-container">
+    <img src="./images/banner.jpg" class="banner" />
+  </section>
   <main>
-    <section class="principal">
-      <article class="image-container">
-        <img src="banner.jpg" class="banner" />
-      </article>
-      <h2>Sobre a Barbearia Alura</h2>
 
+    <section class="principal">
+      <h2>Sobre a Barbearia Alura</h2>
+      <div class="utensilios">
+        <img src="./images/utensilios.jpg" alt="Utensílios de um barbeiro">
+      </div>
       <p>
         Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o
         seu
@@ -53,6 +57,15 @@
       </p>
     </section>
 
+    <section class="mapa">
+      <h2>Nosso estabelecimento</h2>
+      <p>Nosso estabelecimento está localizado no coração da cidade.</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.449840047712!2d-46.63657249503829!3d-23.5881948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Escola%20de%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1661020270462!5m2!1spt-BR!2sbr"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
     <section class="beneficios">
       <h2>Benefícios</h2>
 
@@ -65,15 +78,18 @@
         </ul>
 
         <div class="image-container">
-          <img src="./beneficios.jpg" alt="benefícios">
+          <img src="./images/beneficios.jpg" alt="benefícios">
         </div>
+
+        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </article>
 
     </section>
   </main>
 
   <footer>
-    <img src="./logo-branco.png" alt="logo rodapé">
+    <img src="./images/logo-branco.png" alt="logo rodapé">
     <p>&copy; Copyright Barbearia Alura</p>
   </footer>
 </body>
