@@ -1,0 +1,53 @@
+.principal>*+* {
+  margin-top: 1rem;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+h2 {
+  --background: hsl(0, 100%, 50%);
+  padding: .5rem;
+  box-shadow: 8px 8px 0 -2px var(--background);
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  cursor: pointer;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+h2:hover {
+  box-shadow: 12px 12px 0 -2px var(--background);
+  background-color: hsl(0, 0%, 95%);
+}
+
+p {
+  text-align: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.beneficios-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+  padding-block: 2rem;
+  justify-content: space-between;
+}
+
+.items {
+  list-style-position: inside;
+  font-style: italic;
+}
+
+.beneficios-info ul {
+  flex: 1 1 100%;
+  columns: 2;
+}
+
+.beneficios-info li+li {
+  margin-top: 1rem;
+  text-align: justify;
+}
